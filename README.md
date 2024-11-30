@@ -18,7 +18,7 @@ Here's my solution to the QR Code Component challenge on FrontEnd Mentor.
 ***
 ### Screenshots
 - How the website looks like in your laptop browser:
-![](./WebsiteLaptopDesign.jpg)
+![](./WebsiteLaptopDesign.png)
 - Multiple phone design of the website:
 ![](./MobileDesignPortrait.png)
 ![](./MobileDesignRight.png)
@@ -59,59 +59,75 @@ From working on this project, I learned the following key skills:
 
 ### Code snippets
 Here are some code highlighted code snippets with a description:
-1. **HTML Structure**
+1. **Semantic HTML:**
 ```html
-<main><section><div class="card"><img>...</div></section></main>
+<!-- Main content area with QR code -->
+<main>
+  <div class="card">
+    <img src="images/image-qr-code.png" alt="QR code"> <!-- Image with alt for accessibility -->
+    <h2>Improve your front-end skills</h2> <!-- Card heading -->
+    <p>Scan the QR code to visit Frontend Mentor.</p> <!-- Description text -->
+  </div>
+</main>
+<!-- Footer with attribution -->
+<footer>
+  <p>Challenge by <a href="#">Frontend Mentor</a>. Coded by <a href="#">Ghazi Benattia</a>.</p>
+</footer>
 ```
-**Description: Used semantic HTML5 elements for a clear and accesible structure.**
+**In this HTML snippet, I structured the page using semantic tags like <main> and <footer>. I also ensured accessibility by adding an 'alt' attribute to the image and kept the content simple and meaningful.**
 
 ---
-2. **Centering with Flexbox**
+2. **Responsive Image:**
 ```css
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-```
-**Description: Centered the content using Flexbox for an easy alignment.**
-
----
-3. **Image Styling:**
-```css
+/* Ensures the image is responsive and fits its container */
 .card img {
-    width: 100%;
-    border-radius: 12px;
+    max-width: 100%; /* Prevents overflow */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 0.75rem; /* Rounded corners for smooth appearance */
 }
 ```
-**Description: Made the image responsive and gave it rounded corners.**
+**I used CSS to make the image fully responsive. By setting "max-width: 100%" and "height: auto", the image will resize properly on different screen sizes without breaking the layout.**
 
 ---
-4. **Card Styling:**
+3. **Flexbox Layout:**
 ```css
-.card {
-    padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+/* Centering content vertically and horizontally using flexbox */
+body {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    min-height: 100svh; /* Ensures content fits the viewport height */
+    text-align: center; /* Centers text */
 }
 ```
-**Description: Styled the card with padding, shadow, and rounded corners for a clean design.**
+**For this layout, I used Flexbox to center the content both vertically and horizontally. I also made sure that the content is not cut off on smaller screens by using "min-height: 100svh".**
 
 ---
-5. **Google Fonts:**
+4. **Scalable Typography:**
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* Scalable and accessible font sizing */
+body { font-size: 0.9375rem; } /* Base font size for accessibility */
+.card-title { font-size: 1.4rem; } /* Large font for the card heading */
+.card-description { font-size: 1rem; line-height: 1.5; } /* Regular paragraph with good readability */
 ```
-**Description: Imported the font "Outfit" to improve the website typography.**
+**I used "rem" for font sizes to ensure better accessibility and scalability across different devices and browser settings. This ensures the text adapts well to user preferences.**
 
 ---
-6. **Hover Effect:**
-```css
-.attribution a:hover {
-    text-decoration: underline;
-}
+5. **Footer Attribution:**
+- HTML:
+```html
+<!-- Footer with links for challenge and author attribution -->
+<footer>
+  <p>Challenge by <a href="#">Frontend Mentor</a>. Coded by <a href="#">Ghazi Benattia</a>.</p>
+</footer>
 ```
-**Description: Added an underline effect when hovering over the links for interactivity.**
+- CSS:
+```css
+/* Styling for footer links */
+footer a { color: #0366d6; text-decoration: none; } /* Default link style */
+footer a:hover { text-decoration: underline; } /* Underline on hover for interactivity */
+```
+**The footer contains attribution for the challenge and myself. I styled the links to make them interactive, adding an underline effect on hover to improve user experience.**
 
 ---
 ### Continued development
