@@ -1,73 +1,110 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
-/* General Body Styling */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
     font-family: 'Outfit', sans-serif;
+    /* Primary font */
     background-color: hsl(212, 45%, 89%);
+    /* Light blue background */
     display: flex;
+    /* Flex layout for centering */
+    flex-direction: column;
+    /* Ensures vertical stacking of content */
     align-items: center;
+    /* Centers content horizontally */
     justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-size: 15px;
+    /* Centers content vertically */
+    min-height: 100svh;
+    /* Ensures content fills the viewport */
+    padding: 1rem;
+    /* Adds spacing around the edges */
+    text-align: center;
+    /* Centers all text */
+    font-size: 0.9375rem;
+    /* Base font size of 15px */
 }
 
 /* Container Styling */
 .container {
-    max-width: 320px;
-    max-height: 350px;
-    margin: 0 auto;
+    max-width: 20rem;
+    /* 320px for responsiveness */
 }
 
 /* Card Styling */
 .card {
     background-color: hsl(0, 0%, 100%);
+    /* White background */
     padding: 1.5rem;
+    /* Inner padding for spacing */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: center;
+    /* Subtle shadow effect */
     border-radius: 0.625rem;
-    max-width: 17rem;
-    margin-bottom: 1rem;
+    /* Smooth rounded corners */
 }
 
 /* Image Styling */
 .card img {
-    width: 100%;
-    border-radius: 12px;
+    max-width: 100%;
+    /* Prevents overflow */
+    height: auto;
+    /* Maintains aspect ratio */
+    display: block;
+    /* Removes inline gaps */
+    border-radius: 0.75rem;
+    /* Smooth corners */
     margin-bottom: 1rem;
-    max-width: 18rem;
-    max-height: 18rem;
+    /* Space below the image */
 }
 
-/* Text Styling */
-.card h2 {
+/* Title Styling */
+.card-title {
     color: hsl(218, 44%, 22%);
+    /* Dark blue color */
     font-size: 1.4rem;
+    /* Large text size */
     font-weight: 700;
+    /* Bold for emphasis */
     margin-bottom: 0.75rem;
-    width: 100%;
+    /* Spacing below */
 }
 
-.card p {
+/* Description Styling */
+.card-description {
     color: hsl(216, 15%, 48%);
+    /* Grayish blue text */
     font-size: 1rem;
+    /* Regular text size */
     line-height: 1.5;
+    /* Comfortable line spacing */
     margin-bottom: 1rem;
+    /* Space below */
 }
 
-/* Attribution Section */
+/* Footer Styling */
 .attribution {
-    font-size: 12px;
-    text-align: center;
+    font-size: 0.75rem;
+    /* Small text size */
     margin-top: 1rem;
+    /* Space above footer */
 }
 
+/* Footer Links */
 .attribution a {
     color: hsl(228, 45%, 44%);
+    /* Bright blue links */
     text-decoration: none;
+    /* Removes underline */
 }
 
 .attribution a:hover {
     text-decoration: underline;
+    /* Adds underline on hover */
 }
